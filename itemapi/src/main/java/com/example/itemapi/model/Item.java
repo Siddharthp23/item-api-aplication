@@ -24,7 +24,6 @@ public class Item {
         this.price = price;
     }
 
-    // Getters & Setters
     public String getId() { return id; }
     public void setId(String id) { this.id = id; }
 

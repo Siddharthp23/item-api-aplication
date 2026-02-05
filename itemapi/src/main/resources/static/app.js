@@ -1,7 +1,6 @@
 const API_URL = "https://item-api-aplication.onrender.com/api/items";
 
 
-// ADD ITEM
 async function addItem() {
 
     const item = {
@@ -25,11 +24,33 @@ async function addItem() {
 }
 
 
-// GET ALL ITEMS
 async function getItems() {
 
     const response = await fetch(API_URL);
     const items = await response.json();
+
+    displayItems(items);
+}
+
+
+async function searchItem() {
+
+    const id = document.getElementById("searchId").value;
+
+    const response = await fetch(`${API_URL}/${id}`);
+
+    if(response.status === 404){
+        alert("Item not found");
+        return;
+    }
+
+    const item = await response.json();
+
+    displayItems([item]);
+}
+
+
+function displayItems(items){
 
     const table = document.getElementById("itemTable");
     table.innerHTML = "";
