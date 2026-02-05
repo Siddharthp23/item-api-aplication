@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Item API Frontend</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+
+        input {
+            margin: 5px;
+            padding: 8px;
+        }
+
+        button {
+            padding: 8px 15px;
+            cursor: pointer;
+        }
+
+        table {
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 70%;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Add Item</h2>
+
+<input type="text" id="name" placeholder="Name">
+<input type="text" id="description" placeholder="Description">
+<input type="number" id="price" placeholder="Price">
+
+<button onclick="addItem()">Add Item</button>
+
+<hr>
+
+<h2>All Items</h2>
+
+<button onclick="getItems()">Load Items</button>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+    </tr>
+    </thead>
+    <tbody id="itemTable"></tbody>
+</table>
+
+<!-- Connect JS file -->
+<script src="app.js"></script>
+
+</body>
+</html>
