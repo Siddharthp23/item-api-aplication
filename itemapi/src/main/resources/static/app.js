@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:9090/api/items";
+const API_URL = "https://item-api-aplication.onrender.com/api/items";
 
 
 // ADD ITEM
